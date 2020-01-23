@@ -24,7 +24,7 @@ The Tesla Android app polls this method every 3 seconds to show the kW output.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -71,7 +71,7 @@ The `site_name` field value can be changed using the **Site Name** command.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -137,7 +137,7 @@ This method is used to render bar and line graphs in the Tesla Android app.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -174,16 +174,15 @@ The `time_series` array will contain objects with subtotals for one or more smal
   
 _energy_  
 A request for a `month` will return a time series of objects with subtotals for each day \(starting at 1 AM\), `year` will return the same but with month subtotals, `week` will return days, `lifetime` will return years, and `day` will return a single object.  
+The returned energy values are in watt-hours \(Wh\).  
   
 _power_  
 The time series will always be in 15 minute increments \(hour aligned\) starting at 12:00 AM on the given `end_date`, or the current date if `end_date` is missing, inclusive. The time series will finish at 11:45 PM on given day or at the last 15 minute increment before the current time, whichever is earlier, inclusive.  
 The `period` parameter is ignored when `kind=power`, so you cannot get a 15 minute time series over an entire month with a single request, for example.  
+The power values are in watts \(W\). Note that if you want to sum this time series to get watt-hours, you will need to divide the sum by 4, since the power is reported every 15 minutes, not every hour.   
   
 **time\_zone\_offset**  
 Number of minutes that the installation and this response report are ahead of UTC.  
-  
-**Energy imported/exported**  
-Values are numbers \(floating-point or integer\) representing kilowatt-hours \(kWh\).  
   
 _The comments in the JSON snippets below are not part of the actual HTTP responses._
 {% endapi-method-response-example-description %}
@@ -377,7 +376,7 @@ May be a deprecated method. Seems to be similar to the **Historical Calendar Dat
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -415,7 +414,7 @@ Site Summary
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

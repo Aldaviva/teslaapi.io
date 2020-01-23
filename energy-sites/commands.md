@@ -17,7 +17,7 @@ Backup Reserve
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -56,7 +56,7 @@ The request body is a JSON object.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -110,7 +110,7 @@ Operation Mode
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -148,7 +148,7 @@ Time Of Use Settings
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -186,7 +186,7 @@ Storm Mode
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name=":site\_id" type="integer" required=true %}
-The `{energy_site_id}` from the products list
+The `{energy_site_id}` number from the products list
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

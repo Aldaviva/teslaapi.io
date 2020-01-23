@@ -46,10 +46,10 @@ Bearer `{access_token}` response from authentication
       "backseat_token_updated_at": null
     },
     {
-      "energy_site_id": :energy_site_id,
+      "energy_site_id": 1234567,
       "resource_type": "solar",
       "site_name": "My Site",
-      "id": :energy_site_guid,
+      "id": "00000001-0002-0003-0004-000000000005",
       "solar_power": 760,
       "sync_grid_alert_enabled": false,
       "breaker_alert_enabled": false
